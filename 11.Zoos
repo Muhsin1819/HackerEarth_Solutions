@@ -14,7 +14,7 @@ def zoo(str_small):
     else:
         return("No")
 
-#recieving_input
+#receiving_input
 str = input()
 str_small = str.lower()
 
