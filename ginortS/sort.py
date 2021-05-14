@@ -3,6 +3,8 @@ string = input()
 small_list = []
 cap_list = []
 digit = []
+odd_digit = []
+even_digit = []
 
 def ginortS(small_list, cap_list, digit):
 
@@ -24,6 +26,18 @@ for char in string:
 
 small_list = sorted(small_list)
 cap_list = sorted(cap_list)
-digit = sorted(digit)
 
-print(ginortS(small_list, cap_list, digit))
+for num in digit:
+    if int(num)%2 == 0:
+        even_digit.append(num)
+    else:
+        odd_digit.append(num)
+
+even_digit = sorted(even_digit)
+odd_digit = sorted(odd_digit)
+
+for t in even_digit:
+    odd_digit.append(t)
+
+
+print(ginortS(small_list, cap_list, odd_digit), end="")
